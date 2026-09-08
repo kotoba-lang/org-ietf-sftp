@@ -7,7 +7,7 @@
 ;; carried over the actual encrypted SSH transport is
 ;; test/kotobase/sftp/transport/ssh_demo.cljs (see its own docstring).
 (ns kotobase.sftp.transport.sftp-subsystem-test
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [cljs.test :refer [deftest is testing]]
             [kotobase.local :as local]
             [kotobase.sftp.transport.sftp-subsystem :as sftp]
