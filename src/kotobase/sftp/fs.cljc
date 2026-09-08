@@ -62,7 +62,7 @@
       share (mirrors SFTP's own single-filesystem RENAME semantics; SFTP
       has no protocol concept of a multi-share request in the first
       place)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kotobase.store :as st]))
 
 ;; ---------------------------------------------------------------------------
