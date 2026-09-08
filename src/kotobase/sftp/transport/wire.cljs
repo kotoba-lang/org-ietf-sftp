@@ -22,7 +22,7 @@
   namespace borrows its shape from) are separate, ratified specs that ARE
   real RFCs, referenced here only for the wire-format shape, not as a
   compliance claim for this implementation."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             ["node:crypto" :as crypto]))
 
 ;; ---------------------------------------------------------------------------

@@ -40,7 +40,7 @@
   writes non-contiguous ranges gets a file that's the naive concatenation
   of what arrived, not a sparse file) — a disclosed v0.1 limitation, not
   silently swept under the rug."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kotobase.sftp.fs :as fs]
             [kotobase.sftp.transport.wire :as w]))
 

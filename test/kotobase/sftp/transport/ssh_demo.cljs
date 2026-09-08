@@ -47,7 +47,7 @@
 (ns kotoba.sftp.transport.ssh-demo
   (:require ["node:child_process" :as cp]
             ["node:net" :as net]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [promesa.core :as p]
             [kotobase.sftp.transport.ssh :as ssh]
             [kotobase.sftp.transport.sftp-subsystem :as sftp]
