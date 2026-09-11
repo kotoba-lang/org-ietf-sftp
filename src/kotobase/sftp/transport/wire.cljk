@@ -13,7 +13,7 @@
   HONESTY NOTE ON RFC/INTEROP SCOPE: these primitives are written to be
   RFC-4253/8731-SHAPED and self-consistent (this repo's own client and
   server, both implemented here, genuinely key-exchange and decrypt each
-  other's traffic — see test/kotobase/sftp/transport/ssh_demo.cljs for
+  other's traffic — see test/kotobase/sftp/transport/ssh_demo.cljk for
   the real cross-process proof). They have NOT been tested for byte-exact
   interop against a real OpenSSH client or server, and this repo makes NO
   claim that they would pass such a test today. IETF's own secsh WG draft
@@ -382,7 +382,7 @@
   FURTHER bytes already sitting in `chunk` (a real risk: a single TCP
   'data' event can easily contain the tail of the plaintext NEWKEYS
   packet AND the start of the very next, now-encrypted, packet
-  concatenated together — see test/kotobase/sftp/transport/wire_test.cljs
+  concatenated together — see test/kotobase/sftp/transport/wire_test.cljk
   for a test proving this exact boundary case). Throws
   `:kotobase.sftp.transport/mac-mismatch` if an encrypted packet's MAC
   doesn't verify — callers should treat that as fatal (close the

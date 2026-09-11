@@ -105,7 +105,7 @@ SFTP subsystem:
   `kotobase.sftp.fs`.
 
 **This genuinely works, and is genuinely tested, not merely "shaped":**
-`test/kotobase/sftp/transport/ssh_demo.cljs` spawns a real second `nbb` OS
+`test/kotobase/sftp/transport/ssh_demo.cljk` spawns a real second `nbb` OS
 process running this code as a server, drives it as a client from a
 different process over a real TCP socket, and proves the FULL chain —
 handshake through an encrypted `mkdir → write → close → open → read → stat
@@ -170,10 +170,10 @@ wasm` > `clojurewasm` > `ClojureScript` > `nbb` > (jvm/bb)):
 git clone https://github.com/kotoba-lang/kotobase .deps/kotobase
 
 # Phase 1 core + wire/kex unit tests + sftp-subsystem unit tests (fast, no sockets)
-nbb --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljs
+nbb --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljk
 
 # The real cross-process SSH/SFTP demo (slower — spawns a second OS process)
-nbb --classpath "src:test:.deps/kotobase/src" test/kotobase/sftp/transport/ssh_demo.cljs
+nbb --classpath "src:test:.deps/kotobase/src" test/kotobase/sftp/transport/ssh_demo.cljk
 ```
 
 The `:test` alias in `deps.edn` is the JVM **compat** suite for the pure
@@ -183,7 +183,7 @@ The `:test` alias in `deps.edn` is the JVM **compat** suite for the pure
 ### Try the experimental transport by hand
 
 ```bash
-nbb --classpath "src:test:.deps/kotobase/src" bin/sftp_node.cljs listen --port 6222 --share home
+nbb --classpath "src:test:.deps/kotobase/src" bin/sftp_node.cljk listen --port 6222 --share home
 # separate terminal / process — no general-purpose CLI SFTP client ships
 # here (see kotobase.sftp.transport.ssh's docstring: the client this repo
 # provides is demo/test-only); use the REPL API in ssh.cljs directly, or

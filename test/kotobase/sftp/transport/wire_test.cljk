@@ -4,7 +4,7 @@
 ;; examples, and exchange-hash/key-derivation self-consistency. These do
 ;; NOT open a socket — the real cross-process proof that two independent
 ;; processes actually complete a handshake and exchange encrypted SFTP
-;; traffic is test/kotobase/sftp/transport/ssh_demo.cljs, run as its own
+;; traffic is test/kotobase/sftp/transport/ssh_demo.cljk, run as its own
 ;; CI step (see ci.yml and that file's own docstring for exactly what it
 ;; does and does not prove).
 (ns kotobase.sftp.transport.wire-test

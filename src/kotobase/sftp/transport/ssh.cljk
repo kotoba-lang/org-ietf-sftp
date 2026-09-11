@@ -19,7 +19,7 @@
   kotobase.sftp.fs — the pure Phase-1 core this whole repo's transport
   question is secondary to (ADR-2607172210's own framing).
 
-  VERIFIED, NOT JUST SHAPED: test/kotobase/sftp/transport/ssh_demo.cljs
+  VERIFIED, NOT JUST SHAPED: test/kotobase/sftp/transport/ssh_demo.cljk
   spawns a real second `nbb` OS process running this code as a server and
   drives it as a client from this process, over a real TCP socket — the
   full chain (version exchange, KEXINIT, curve25519-sha256 ECDH with a
