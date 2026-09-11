@@ -1,7 +1,7 @@
 ;; Not a unit test — an EXECUTABLE end-to-end demo that must genuinely
 ;; pass when run, matching the verification style
 ;; ADR-2607161817/kotoba-lang/dtn's tcp_demo.cljs established: it spawns
-;; an actual second `nbb` OS process (bin/sftp_node.cljs, found via
+;; an actual second `nbb` OS process (bin/sftp_node.cljk, found via
 ;; $PATH), connects to its real bound TCP port from THIS process (acting
 ;; as the SFTP client — see kotobase.sftp.transport.ssh's own docstring
 ;; for why that client is demo/test-only, not a general-purpose library),
@@ -42,7 +42,7 @@
 ;; root:
 ;;
 ;;   nbb --classpath "src:test:.deps/kotobase/src" \
-;;     test/kotobase/sftp/transport/ssh_demo.cljs
+;;     test/kotobase/sftp/transport/ssh_demo.cljk
 
 (ns kotoba.sftp.transport.ssh-demo
   (:require ["node:child_process" :as cp]
@@ -84,11 +84,11 @@
 
 (defn run-demo []
   (println "\n--- kotobase.sftp.transport.ssh real cross-process demo ---")
-  (println "  spawning a second `nbb` OS process running bin/sftp_node.cljs listen --port"
+  (println "  spawning a second `nbb` OS process running bin/sftp_node.cljk listen --port"
             demo-port "...")
   (let [out-chunks (atom [])
         err-chunks (atom [])
-        child (cp/spawn "nbb" #js ["--classpath" classpath "bin/sftp_node.cljs" "listen"
+        child (cp/spawn "nbb" #js ["--classpath" classpath "bin/sftp_node.cljk" "listen"
                                     "--port" (str demo-port) "--share" "home"]
                          #js {:cwd (js/process.cwd)})]
     (.on (.-stdout child) "data" (fn [chunk] (swap! out-chunks conj (str chunk))))

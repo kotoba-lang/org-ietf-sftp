@@ -21,13 +21,13 @@ jobs:
       - run: npm install --global nbb
       # Phase 1 core (kotobase.sftp.fs, pure .cljc) + transport unit-level
       # wire/kex tests (kotobase.sftp.transport.*, .cljs-only). Both run
-      # together via bin/run_tests.cljs (cljs.test), same as
+      # together via bin/run_tests.cljk (cljs.test), same as
       # kotobase-protocols's own single nbb test entrypoint.
-      - run: nbb --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljs
+      - run: nbb --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljk
       # The real cross-process SSH/SFTP demo (spawns a second nbb OS
       # process, connects over a real socket — same verification style as
       # kotoba-lang/dtn's tcp_demo.cljs). Kept as a separate CI step (not
       # folded into cljs.test) so its pass/fail and stdout are easy to
       # read on their own; see the demo file's own docstring for exactly
       # what it does and does not prove.
-      - run: nbb --classpath "src:test:.deps/kotobase/src" test/kotobase/sftp/transport/ssh_demo.cljs
+      - run: nbb --classpath "src:test:.deps/kotobase/src" test/kotobase/sftp/transport/ssh_demo.cljk

@@ -4,11 +4,11 @@
 ;; kotobase.sftp.transport.ssh's own docstring — 'none' userauth is
 ;; unconditionally accepted). Good for exercising the experimental SFTP
 ;; transport by hand or from the E2E demo
-;; (test/kotobase/sftp/transport/ssh_demo.cljs, which spawns this file as
+;; (test/kotobase/sftp/transport/ssh_demo.cljk, which spawns this file as
 ;; a real second OS process) — NOT for running on the open internet.
 ;;
 ;; Usage:
-;;   nbb --classpath "src:test:<kotobase>/src" bin/sftp_node.cljs \
+;;   nbb --classpath "src:test:<kotobase>/src" bin/sftp_node.cljk \
 ;;     listen --port 6222 --share home
 ;;   ;; -> starts a long-running SFTP server on 127.0.0.1:<port>, serving
 ;;   ;;    share <share> out of a fresh in-memory kotobase.local store.
