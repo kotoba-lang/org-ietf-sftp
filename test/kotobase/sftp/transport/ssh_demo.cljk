@@ -41,7 +41,7 @@
 ;; and exits 0 iff every check passed (else 1). Run from this repo's
 ;; root:
 ;;
-;;   nbb --classpath "src:test:.deps/kotobase/src" \
+;;   kbb --backend sci --classpath "src:test:.deps/kotobase/src" \
 ;;     test/kotobase/sftp/transport/ssh_demo.cljk
 
 (ns kotoba.sftp.transport.ssh-demo
