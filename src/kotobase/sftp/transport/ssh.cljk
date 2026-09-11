@@ -33,7 +33,7 @@
   HONESTLY NARROWED list below and the README.
 
   `.cljs`-only: node:net + node:crypto + Buffer. Never `:require`d by
-  kotobase.sftp.fs (the pure core) or by the JVM `clojure -M:test` compat
+  kotobase.sftp.fs (the pure core) or by the JVM `kbb -M:test` compat
   suite — see fs.cljc's own docstring for why that decoupling matters,
   and deps.edn for how CI keeps the JVM suite from ever touching this
   file.
