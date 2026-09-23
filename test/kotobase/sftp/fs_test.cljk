@@ -1,5 +1,5 @@
 (ns kotobase.sftp.fs-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kotobase.local :as local]
             [kotobase.sftp.fs :as fs]
             [kotobase.store :as st]))
